@@ -1,14 +1,9 @@
-# based off of this:
-# https://github.com/CentOS/CentOS-Dockerfiles/tree/master/httpd
-# But here is one that is also S2I and on RHEL
-# https://github.com/sclorg/httpd-container/blob/master/2.4/Dockerfile.rhel7
-# This one is simpler because I am not doing S2I or SSL enablement.
-# DO NOT USE IN PRODUCTION - this is just for teaching purposes
+
 
 FROM centos:centos7
 
 
-MAINTAINER Steve Pousty <thesteve0@redhat.com>
+MAINTAINER Paweł Mazurek <lolo78@o2.pl>
 
 RUN yum install -y --setopt=tsflags=nodocs httpd.x86_64 && yum clean all -y
 
