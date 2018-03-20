@@ -1,3 +1,4 @@
+FROM centos:centos7
 RUN dnf install -y sudo && \
     adduser user && \
     echo "user ALL=(root) NOPASSWD:ALL" > /etc/sudoers.d/user && \
